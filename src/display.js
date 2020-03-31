@@ -42,6 +42,7 @@ const display = (() => {
     locationContainer.classList.add('location');
     const location = document.createElement('h2');
     location.textContent = 'Location';
+    location.id = 'location-title';
     const icon = document.createElement('p');
     icon.textContent = 'Icon';
     main.appendChild(locationContainer);
