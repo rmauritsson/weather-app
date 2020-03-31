@@ -54,11 +54,13 @@ const display = (() => {
     const degreeSection = document.createElement('div');
     degreeSection.classList.add('degree-section');
     const degree = document.createElement('h2');
+    degree.id = 'degree';
     degree.textContent = '23';
     const symbol = document.createElement('span');
     symbol.textContent = 'F';
     const desc = document.createElement('div');
     desc.textContent = "It's hot";
+    desc.id = 'desc';
     main.appendChild(tempContainer);
     tempContainer.appendChild(degreeSection);
     degreeSection.appendChild(degree);
