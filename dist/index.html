@@ -3,8 +3,39 @@
   <head>
     <meta charset="utf-8">
     <title>Weather App</title>
-  </head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Muli:wght@200&display=swap" rel="stylesheet">
   <body>
-    <script src="" charset="utf-8"></script>
+    <div id="main" class="main">
+      <h1 class="maintitle">Weather Forecast</h1>
+      <div class="form-container" id="form-container">
+        <form><div class="form-group mx-sm-3 mb-2">
+          <label class="sr-only">Search City</label>
+          <input type="text" id="inputCity" placeholder="Search City" class="form-control"></div>
+          <button class="btn btn-secondary mb-2">Search</button>
+        </form>
+      </div>
+
+      <div class="location">
+        <h2 id="location-title">Location</h2>
+        <img id="icon" alt="icon">
+      </div>
+
+      <div class="temperature">
+        <button id='change-degree'>Units</button>
+        <div class="degree-section">
+          <h2 id="degree"></h2>
+          <span id = "degree-symbol"></span>
+        </div>
+        <div id="pressure"></div>
+        <div id="winds"></div>
+        <div id="desc"></div>
+      </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="main.js" defer></script>
   </body>
 </html>
