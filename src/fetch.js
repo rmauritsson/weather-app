@@ -18,7 +18,7 @@ const fetchData = (() => {
     defaultStatus = 'F';
     temp.textContent = (`${temperature}`);
     symbol.textContent = ' °F ';
-    unit.innerHTML = 'Celsius';
+    unit.innerHTML = 'Change to Celsius';
   };
 
   const convertToC = (fahr) => {
@@ -26,19 +26,29 @@ const fetchData = (() => {
     defaultStatus = 'C';
     temp.innerHTML = (`${temperature}`);
     symbol.textContent = ' °C ';
-    unit.innerHTML = 'Fahrenheit';
+    unit.innerHTML = 'Change to Fahrenheit';
   };
 
   const setDOM = (entry) => {
+    console.log(entry);
     defaultStatus = 'C';
     location.textContent = `${entry.name}, ${entry.sys.country}`;
     desc.textContent = `Description: ${entry.weather[0].description}`;
     temperature = Math.ceil(entry.main.temp - 273.15);
     temp.textContent = temperature;
     symbol.textContent = ' °C ';
-    pressure.textContent = `Pressure: ${entry.main.pressure} hPa`
-    winds.textContent = `Wind Speeds: ${entry.wind.speed} Km/h`
-    unit.innerHTML = 'Fahrenheit';
+    pressure.textContent = `Pressure: ${entry.main.pressure} hPa`;
+    winds.textContent = `Wind Speeds: ${entry.wind.speed} Km/h`;
+    unit.innerHTML = 'Change to Fahrenheit';
+    document.querySelector('.location').style.visibility = 'visible';
+    document.querySelector('.temperature').style.visibility = 'visible';
+  };
+
+  const setIcon = (status) => {
+    const icon = `${status.weather[0].icon}`;
+
+    const weatherStatus = document.getElementById('icon');
+    weatherStatus.src = `http://openweathermap.org/img/wn/${icon}@2x.png`;
   };
 
   const getWeather = async (city) => {
@@ -46,6 +56,7 @@ const fetchData = (() => {
     const data = await response.json();
 
     setDOM(data);
+    setIcon(data);
   };
 
   document.getElementById('change-degree').addEventListener('click', () => {
