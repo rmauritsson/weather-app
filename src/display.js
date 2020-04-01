@@ -66,8 +66,6 @@ const display = (() => {
     degreeSection.appendChild(degree);
     degreeSection.appendChild(symbol);
     tempContainer.appendChild(desc);
-
-    console.log(main);
   };
   return {
     createDom,

@@ -30,7 +30,6 @@ const fetchData = (() => {
   };
 
   const setDOM = (entry) => {
-    console.log(entry);
     defaultStatus = 'C';
     location.textContent = `${entry.name}, ${entry.sys.country}`;
     desc.textContent = `Description: ${entry.weather[0].description}`;
