@@ -4,37 +4,25 @@
 
 ![screenshot](./app_screenshot.png)
 
-Additional description about the project and its features.
-
-## Built With
-
-- Javascript,
-- Bootstrap,
-
 ## Live Demo
 
-[Live Demo Link](https://raw.githack.com/rmauritsson/weather-app/feature/site-data/dist/index.html)
-
+[Live Demo Link](https://rawcdn.githack.com/rmauritsson/weather-app/feature/site-data/dist/index.html)
 
 ## About The Project
 
 This project is about using APIs in Javascript. I created a weather forecast site using the openweather api. You can search for any city in the world to get their weather data.
 
-
+## Built With
 This progam was made using this technologies
 
 * [Javascript](https://www.javascript.com/)
 * [Stickler](https://stickler-ci.com/)
-
-
 
 👤 **Author**
 
 - Leonard Rwai Kanyesigye:
 [Github](https://github.com/rmauritsson),
 [Twitter](https://twitter.com/leokanye),
-
-
 
 ## 🤝 Contributing
 
