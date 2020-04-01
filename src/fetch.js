@@ -47,7 +47,7 @@ const fetchData = (() => {
     const icon = `${status.weather[0].icon}`;
 
     const weatherStatus = document.getElementById('icon');
-    weatherStatus.src = `http://openweathermap.org/img/wn/${icon}@2x.png`;
+    weatherStatus.src = `https://openweathermap.org/img/wn/${icon}@2x.png`;
   };
 
   const getWeather = async (city) => {
