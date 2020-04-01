@@ -1,5 +1,5 @@
 const fetchData = (() => {
-  const api = 'http://api.openweathermap.org/data/2.5/weather?q=';
+  const api = 'https://api.openweathermap.org/data/2.5/weather?q=';
   const key = '4da1db128530972d07e307d26325f8b6';
 
   const location = document.querySelector('#location-title');
@@ -47,7 +47,7 @@ const fetchData = (() => {
     const icon = `${status.weather[0].icon}`;
 
     const weatherStatus = document.getElementById('icon');
-    weatherStatus.src = `http://openweathermap.org/img/wn/${icon}@2x.png`;
+    weatherStatus.src = `https://openweathermap.org/img/wn/${icon}@2x.png`;
   };
 
   const getWeather = async (city) => {
